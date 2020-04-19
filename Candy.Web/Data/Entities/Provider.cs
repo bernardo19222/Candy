@@ -12,6 +12,7 @@ namespace Candy.Web.Data.Entities
 		public string Name { get; set; }
 
 		[Required(ErrorMessage = "{0} es requerido")]
+		[DataType(DataType.EmailAddress)]
 		[Display(Name = "Correo Electronico")]
 		public string Email { get; set; }
 

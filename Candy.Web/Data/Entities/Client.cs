@@ -32,6 +32,7 @@ namespace Candy.Web.Data.Entities
         public Gender Gender { get; set; }
 
         [Required(ErrorMessage = "{0} es requerido")]
+        [DataType(DataType.EmailAddress)]
         [Display(Name = "Correo Electronico")]
         public string Email { get; set; }
 
@@ -46,6 +47,6 @@ namespace Candy.Web.Data.Entities
         [Required(ErrorMessage = "{0} es requerido")]
         [MaxLength(20, ErrorMessage = "El campo {0} no puede tener mas de {1} caracteres")]
         [Display(Name = "Direccion")]
-        public string address { get; set; }
+        public string Address { get; set; }
     }
 }
