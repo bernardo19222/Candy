@@ -23,10 +23,29 @@ namespace Candy.Web.Data.Entities
         [Display(Name = "Fecha de nacimiento")]
         public DateTime BirthDate { get; set; }
 
+        [Required(ErrorMessage = "{0} es requerido")]
         [Display(Name = "Nombre completo")]
         public string FullName => $"{LastName} {FirstName}";
 
+        [Required(ErrorMessage = "{0} es requerido")]
         [Display(Name = "Género")]
         public Gender Gender { get; set; }
+
+        [Required(ErrorMessage = "{0} es requerido")]
+        [Display(Name = "Correo Electronico")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "{0} es requerido")]
+        [Display(Name = "Numero De Telefono")]
+        public int Phone { get; set; }
+
+        [Required(ErrorMessage = "{0} es requerido")]
+        [Display(Name = "Pais")]
+        public Country Country { get; set; }
+
+        [Required(ErrorMessage = "{0} es requerido")]
+        [MaxLength(20, ErrorMessage = "El campo {0} no puede tener mas de {1} caracteres")]
+        [Display(Name = "Direccion")]
+        public string address { get; set; }
     }
 }
